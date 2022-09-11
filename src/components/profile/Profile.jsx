@@ -8,7 +8,7 @@ const Profile = ({ username,
   stats:{followers,views,likes} }) => 
       <div className={css.profile}>
         <div className={css.description}>
-          <img
+          <img 
             src={avatar}
             alt="User avatar"
             className={css.avatar}
@@ -19,15 +19,15 @@ const Profile = ({ username,
         </div>
 
         <ul className={css.stats}>
-          <li>
+          <li className={css.item}>
             <span className={css.label}>Followers </span>
             <span className={css.quantity}>{followers}</span>
           </li>
-          <li>
+          <li className={css.item}>
             <span className={css.label}>Views </span>
             <span className={css.quantity}>{views}</span>
           </li>
-          <li>
+          <li className={css.item}>
             <span className={css.label}>Likes </span>
             <span className={css.quantity}>{likes}</span>
           </li>

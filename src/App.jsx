@@ -8,7 +8,7 @@ import friends from './friends.json'
 import transactions from './transactions.json'
 
  const App = () => 
-    <>
+   <div style={{ padding: "15px",display:"flex",gap:"20px"}}>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -19,6 +19,6 @@ import transactions from './transactions.json'
       <Statistics title="Upload stats" stats={data}/>
      <FriendList friends={friends} />
      <TransactionHistory items={transactions} />
-    </>
+    </div>
 
 export default App

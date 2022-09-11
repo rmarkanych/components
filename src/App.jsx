@@ -1,18 +1,14 @@
-import Profile from './components/Profile';
+import Profile from './components/profile/Profile';
+import Statistics from './components/statistics/Statistics';
+import FriendList from './components/friends/FriendList'
+import TransactionHistory from 'components/transactions/Transactions';
 import user from './user.json';
+import data from './data.json';
+import friends from './friends.json'
+import transactions from './transactions.json'
 
-
-export const App = () => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 24,
-        color: '#010101',
-      }}
-    >
+ const App = () => 
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -20,6 +16,9 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-    </div>
-  );
-};
+      <Statistics title="Upload stats" stats={data}/>
+     <FriendList friends={friends} />
+     <TransactionHistory items={transactions} />
+    </>
+
+export default App

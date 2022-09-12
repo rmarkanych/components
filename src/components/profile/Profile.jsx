@@ -5,8 +5,9 @@ const Profile = ({ username,
   tag,
   location,
   avatar,
-  stats:{followers,views,likes} }) => 
-      <div className={css.profile}>
+  stats: { followers, views, likes } }) => {
+  return (
+    <div className={css.profile}>
         <div className={css.description}>
           <img 
             src={avatar}
@@ -17,7 +18,6 @@ const Profile = ({ username,
           <p className={css.tag}>@{tag}</p>
           <p className={css.location}>{location}</p>
         </div>
-
         <ul className={css.stats}>
           <li className={css.item}>
             <span className={css.label}>Followers </span>
@@ -33,6 +33,9 @@ const Profile = ({ username,
           </li>
         </ul>
       </div>
+  )
+  }
+      
 
 Profile.propTypes = {
   avatar: PropTypes.string,
